@@ -1,4 +1,4 @@
-package com.personal.vetapi.model;
+package com.personal.vetapi.model.user;
 
 import org.hibernate.annotations.ColumnDefault;
 
@@ -9,7 +9,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int user_id;
+    private int userId;
 
     @Column(nullable = false)
     private String firstName;
@@ -37,12 +37,12 @@ public class User {
         this.role = role;
     };
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     };
 
-    public User setUser_id(int user_id) {
-        this.user_id = user_id;
+    public User setUserId(int userId) {
+        this.userId = userId;
         return this;
     };
 
