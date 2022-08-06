@@ -9,7 +9,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int userId;
+    private Long userId;
 
     @Column(nullable = false)
     private String firstName;
@@ -37,11 +37,11 @@ public class User {
         this.role = role;
     };
 
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     };
 
-    public User setUserId(int userId) {
+    public User setUserId(Long userId) {
         this.userId = userId;
         return this;
     };
