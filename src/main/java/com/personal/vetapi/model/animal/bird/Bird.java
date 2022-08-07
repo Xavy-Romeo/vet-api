@@ -11,7 +11,7 @@ import javax.persistence.Entity;
 public class Bird extends Animal {
 
     @ColumnDefault("false")
-    public Boolean hasWingsClipped;
+    private Boolean hasWingsClipped;
 
     public Bird() {};
 
