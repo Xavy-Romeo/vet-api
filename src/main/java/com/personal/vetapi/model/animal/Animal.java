@@ -1,7 +1,6 @@
 package com.personal.vetapi.model.animal;
 
 import com.personal.vetapi.model.user.User;
-import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 
@@ -12,8 +11,7 @@ public class Animal {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long animalId;
 
-    @Column(name = "pet_name")
-    @ColumnDefault("J. Doe")
+    @Column(name = "pet_name", columnDefinition = "varchar(255) default 'J. Doe'")
     private String name;
 
     @Column(nullable = false)
@@ -24,7 +22,6 @@ public class Animal {
     @Column(nullable = false)
     private String color;
 
-    @Column(nullable = false)
     @ManyToOne
     private User owner;
 
