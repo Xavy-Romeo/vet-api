@@ -1,6 +1,7 @@
 package com.personal.vetapi.model.animal.cat;
 
 import com.personal.vetapi.model.animal.Animal;
+import com.personal.vetapi.model.animal.Species;
 import com.personal.vetapi.model.user.User;
 import org.hibernate.annotations.ColumnDefault;
 
