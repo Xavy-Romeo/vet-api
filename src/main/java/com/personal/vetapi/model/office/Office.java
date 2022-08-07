@@ -17,9 +17,9 @@ public class Office {
     private String city;
     @Column(nullable = false)
     private String state;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 5)
     private String zipCode;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 10)
     private String phoneNumber;
 
     public Office() {};
