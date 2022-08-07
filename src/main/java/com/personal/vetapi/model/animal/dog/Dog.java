@@ -13,9 +13,9 @@ public class Dog extends Animal {
     @Column(nullable = false)
     private Double weight;
     @ColumnDefault("false")
-    private boolean isSpayedOrNeutered;
+    private Boolean isSpayedOrNeutered;
     @ColumnDefault("false")
-    private boolean needsVaccination;
+    private Boolean needsVaccination;
 
     public Dog() {
     };

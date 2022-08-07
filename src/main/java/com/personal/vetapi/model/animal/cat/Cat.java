@@ -8,15 +8,15 @@ import org.hibernate.annotations.ColumnDefault;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-@Entity
+@Entity(name = "cats")
 public class Cat extends Animal {
 
     @Column(nullable = false)
     private Double weight;
     @ColumnDefault("false")
-    private boolean isSpayedOrNeutered;
+    private Boolean isSpayedOrNeutered;
     @ColumnDefault("false")
-    private boolean needsVaccination;
+    private Boolean needsVaccination;
 
     public Cat() {};
 
