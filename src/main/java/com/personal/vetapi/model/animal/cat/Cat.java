@@ -1,13 +1,14 @@
-package com.personal.vetapi.model.animal.dog;
+package com.personal.vetapi.model.animal.cat;
 
 import com.personal.vetapi.model.animal.Animal;
 import com.personal.vetapi.model.user.User;
 import org.hibernate.annotations.ColumnDefault;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 
-@Entity(name = "dogs")
-public class Dog extends Animal {
+@Entity
+public class Cat extends Animal {
 
     @Column(nullable = false)
     private Double weight;
@@ -16,10 +17,9 @@ public class Dog extends Animal {
     @ColumnDefault("false")
     private boolean needsVaccination;
 
-    public Dog() {
-    };
+    public Cat() {};
 
-    public Dog(String name, Species species, String breed, String color, User owner, Double weight, boolean isSpayedOrNeutered, boolean needsVaccination) {
+    public Cat(String name, Species species, String breed, String color, User owner, Double weight, boolean isSpayedOrNeutered, boolean needsVaccination) {
         super(name, species, breed, color, owner);
         this.weight = weight;
         this.isSpayedOrNeutered = isSpayedOrNeutered;
@@ -30,7 +30,7 @@ public class Dog extends Animal {
         return weight;
     };
 
-    public Dog setWeight(Double weight) {
+    public Cat setWeight(Double weight) {
         this.weight = weight;
         return this;
     };
@@ -39,7 +39,7 @@ public class Dog extends Animal {
         return isSpayedOrNeutered;
     };
 
-    public Dog setSpayedOrNeutered(boolean spayedOrNeutered) {
+    public Cat setSpayedOrNeutered(boolean spayedOrNeutered) {
         isSpayedOrNeutered = spayedOrNeutered;
         return this;
     };
@@ -48,7 +48,7 @@ public class Dog extends Animal {
         return needsVaccination;
     };
 
-    public Dog setNeedsVaccination(boolean needsVaccination) {
+    public Cat setNeedsVaccination(boolean needsVaccination) {
         this.needsVaccination = needsVaccination;
         return this;
     };
